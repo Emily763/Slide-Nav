@@ -2,37 +2,47 @@ body{
   margin:0;
   padding:0;
 }
+
 header{
 
 }
-.logo{
 
+.logo{
+  width: 120px;
 }
+
 nav{
 
 }
+
 nav a{
 
 }
+
 p{
 
 }
+
 p,table{
   margin-top: 13px;
 }
+
 table, td{
   border:1px solid gray;
   border-collapse: collapse;
   padding: 5px;
 }
+
 td{
   width: 200px;
 }
+
 figure{
     margin: 21px 0;
     position: relative;
     overflow: hidden;
 }
+
 figcaption{
     position: absolute;
     bottom:5px;
@@ -43,19 +53,68 @@ figcaption{
     color: aliceblue;
     
 }
+
 img{
     max-width: 100%;
 }
+
+/* carousel-start */
+.carousel-wrap {
+  margin: 20px auto;
+  padding: 20px;
+  width: 80%;
+  position: relative;
+}
+
+/* fix blank or flashing items on carousel */
+.owl-carousel .item {
+  position: relative;
+  z-index: 100; 
+  -webkit-backface-visibility: hidden; 
+  width: 150px;
+  height: 200px;
+  border: 1px solid black;
+  margin-bottom: 25px;
+}
+
+.item img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* end fix */
+.owl-nav > div {
+  margin-top: -26px;
+  position: absolute;
+  top: 50%;
+  color: #cdcbcd;
+}
+
+.owl-nav i {
+  font-size: 52px;
+}
+
+.owl-nav .owl-prev {
+  left: -30px;
+}
+
+.owl-nav .owl-next {
+  right: -30px;
+}/* carousel-end */
+
 .width-90{
   display: block;
   margin: auto;
   width:90%;
 }
+
 main{
     display: block;
     margin: auto;
     width:90%;
 }
+
 section{
     
 }
@@ -89,13 +148,44 @@ footer{
 
 /* HERO Home page */
 .hero-homepage{
-  height: 30vh;
+  height: 70vh;
   width: 100%;
-  background-image:url("images/green.jpg");
-  background-position: center;
-  background-size: cover;
+  background-image:url(img/HeroHome.jpg);
+  background-position: right;
+  background-position: top;
+  background-size: 165%;
+  background-repeat: no-repeat;
   margin-bottom:40px;
+  display: flex;
+  align-items: flex-end;
+  overflow: scroll;
 }
+
+.hero-homepage div {
+  background-color: #000000a5;
+  width: 80%;
+  margin: 100px auto;
+  padding: 10px;
+  text-align: center;
+  font-size: 11px;
+}
+
+.hero-heading{
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.hero-subhead{
+  color: #fff;
+  margin-top: 10px;
+}
+
+.hero-button{
+  border: 0;
+  padding: 7px 10px;
+  font-size: 1em;
+}
+
 /* HERO contact page */
 
 /* START NAV STYLES */
@@ -104,7 +194,7 @@ footer{
   display: grid;
   min-height: 70px;
   grid-auto-flow: column;
-  background-color: #fcfcfc;
+  background-color: #000;
 /*   grid-gap: 1.5em; */
   padding: 0 40px;
   -webkit-box-shadow: -1px 4px 5px 0px rgba(209, 205, 209, 1);
@@ -117,11 +207,11 @@ footer{
   grid-template-columns: 1fr 30px;
   /* First col is flexable width, the next is a pixil amount. It will push the icon to the right of the screen. */
   justify-content: space-between;
-  align-content: center;
+  align-items: anchor-center;
   font-family: "Open Sans", sans-serif;
   font-size: 30px;
   font-weight: bold;
-  color: black;
+  color: #fff;
   text-transform: uppercase;
 }
 
@@ -196,16 +286,70 @@ footer .fa{
 
 @media only screen and (min-width:600px){
    
-    main{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        margin: auto;
-        width:90%;
-        gap:50px;
-    }
+  main{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin: auto;
+      width:90%;
+      gap:50px;
+  }
     section{
         
-    }
+  }
+  .hero-homepage div {
+    background-color: #747474e3;
+    width: 80%;
+    margin: 100px auto;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .hero-heading{
+    color: #fff;
+    margin-bottom: 10px;
+  }
+
+  .hero-subhead{
+    color: #fff;
+    margin-top: 10px;
+  }
+
+  .hero-button{
+    border: 0;
+    padding: 7px 10px;
+    font-size: 1em;
+  }
+
+  /* carousel-start */
+  .carousel-wrap {
+    margin: 20px auto;
+    padding: 20px;
+    width: 90%;
+    position: relative;
+  }
+
+  /* fix blank or flashing items on carousel */
+  .owl-carousel .item {
+    position: relative;
+    z-index: 100; 
+    -webkit-backface-visibility: hidden; 
+    width: 240px;
+    height: 150px;
+    border: 1px solid black;
+    margin-bottom: 25px;
+  }
+
+  /* end fix */
+  .owl-nav > div {
+    margin-top: -26px;
+    position: absolute;
+    top: 50%;
+    color: #cdcbcd;
+  }
+
+  .owl-nav i {
+    font-size: 52px;
+  }/* carousel-end */
     /* HERO Homepage */
 
     /* HERO contact page */
@@ -241,5 +385,34 @@ footer .fa{
     background: #e9ebee;
   }
     /* END Nav styles ----------------- */
+  /* carousel-start */
+  .carousel-wrap {
+    margin: 20px 20px 20px 60px;
+    padding: 20px;
+    width: 90%;
+    position: relative;
+  }
 
+  /* fix blank or flashing items on carousel */
+  .owl-carousel .item {
+    position: relative;
+    z-index: 100; 
+    -webkit-backface-visibility: hidden; 
+    width: 420px;
+    height: 350px;
+    border: 1px solid black;
+    margin-bottom: 25px;
+  }
+
+  /* end fix */
+  .owl-nav > div {
+    margin-top: -26px;
+    position: absolute;
+    top: 50%;
+    color: #cdcbcd;
+  }
+
+  .owl-nav i {
+    font-size: 52px;
+  }/* carousel-end */
 }
